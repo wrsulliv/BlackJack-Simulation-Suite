@@ -1,0 +1,113 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d3="http://research.microsoft.com/DynamicDataDisplay/1.0"
+        Title="MainWindow" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Height="653" Width="818" Margin="10" VerticalAlignment="Top">
+    <Grid Height="588" Name="grid_Main" Width="795">
+        <TabControl Height="564" HorizontalAlignment="Left" Margin="12,12,0,0" Name="tabControl1" VerticalAlignment="Top" Width="769">
+            <TabItem Header="Simulator Settings" Name="tabItem1">
+                <Grid Name="grid_Tab">
+                    <Button Content="Button" Height="44" HorizontalAlignment="Left" Margin="156,130,0,0" Name="button1" VerticalAlignment="Top" Width="163" Click="button1_Click" />
+                    <ProgressBar Height="39" HorizontalAlignment="Left" Margin="79,69,0,0" Name="progressBar1" VerticalAlignment="Top" Width="663" />
+                    <Label Content="Mins Remaining:  " Height="29" HorizontalAlignment="Left" Margin="387,139,0,0" Name="label5" VerticalAlignment="Top" Width="98" />
+                    <Label Content="--  Progmatic --" Height="29" HorizontalAlignment="Left" Margin="480,139,0,0" Name="lbl_MinsRemaining" VerticalAlignment="Top" Width="122" />
+                    <Label Content="Dev Iterations Remaining: " Height="30" HorizontalAlignment="Left" Margin="338,161,0,0" Name="label6" VerticalAlignment="Top" Width="147" />
+                    <Label Content="--  Progmatic --" Height="29" HorizontalAlignment="Left" Margin="480,161,0,0" Name="lbl_DevIterations" VerticalAlignment="Top" Width="122" />
+                    <TextBox Height="22" HorizontalAlignment="Left" Margin="202,189,0,0" Name="txt_Decks" VerticalAlignment="Top" Width="35" Text="8" />
+                    <TextBox Height="22" HorizontalAlignment="Left" Margin="202,217,0,0" Name="txt_DevIter" VerticalAlignment="Top" Width="117" Text="5" />
+                    <Label Content="Decks: " Height="29" HorizontalAlignment="Left" Margin="143,189,0,0" Name="label7" VerticalAlignment="Top" Width="53" />
+                    <Label Content="Deviation Iterations:" Height="29" HorizontalAlignment="Left" Margin="71,217,0,0" Name="label8" VerticalAlignment="Top" Width="125" />
+                    <TextBox Height="22" HorizontalAlignment="Left" Margin="202,245,0,0" Name="txt_DeckIter" VerticalAlignment="Top" Width="117" Text="10000" />
+                    <Label Content="Deck Iterations: " Height="29" HorizontalAlignment="Left" Margin="96,245,0,0" Name="label9" VerticalAlignment="Top" Width="100" />
+                    <RadioButton Height="19" HorizontalAlignment="Left" Margin="356,206,0,0" Name="radio_Durstenfeld" VerticalAlignment="Top" Width="129" Content="Durstenfeld Shuffle" />
+                    <RadioButton Content="Sullivan Shuffle" Height="19" HorizontalAlignment="Left" Margin="356,227,0,0" Name="radio_Sullivan" VerticalAlignment="Top" Width="129" />
+                    <RadioButton Content="Other Shuffle" Height="19" HorizontalAlignment="Left" Margin="356,248,0,0" Name="radio_Other" VerticalAlignment="Top" Width="129" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Logic / Probability Processor">
+                <Button Content="Button" Height="46" Name="button3" Width="136" Click="button3_Click" />
+            </TabItem>
+            <TabItem Header="Basic Strategy Results" Name="tabitem_BasicStrategyHard">
+                <Grid Width="757" VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <Grid Height="500" Name="grid_BSHard" Width="536" Focusable="False" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,5,0,0">
+                    </Grid>
+                    <GroupBox Header="Game Statistics" Height="350" HorizontalAlignment="Left" Margin="547,6,0,0" Name="group_BSHardStats" VerticalAlignment="Top" Width="204">
+                        <Grid Width="188">
+                            <Label Content="Decks:" Height="32" HorizontalAlignment="Left" Margin="-2,1,0,0" Name="label2" VerticalAlignment="Top" Width="54" />
+                            <Label Height="32" HorizontalAlignment="Left" Margin="0,22,0,0" Name="label3" VerticalAlignment="Top" Width="81" Content="Total Games:" />
+                            <Label Content="H17:" Height="26" HorizontalAlignment="Left" Margin="0,44,0,0" Name="label4" VerticalAlignment="Top" Width="81" />
+                            <Label Height="32" HorizontalAlignment="Left" Margin="39,1,0,0" Name="lbl_Decks" VerticalAlignment="Top" Width="143" />
+                            <Label Height="32" HorizontalAlignment="Left" Margin="72,22,0,0" Name="lbl_TotGames" VerticalAlignment="Top" Width="110" />
+                            <Label Height="32" HorizontalAlignment="Left" Margin="39,44,0,0" Name="lbl_H17" VerticalAlignment="Top" Width="143" />
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Basic Strategy Simulator" HorizontalAlignment="Left" Name="tabItem2" VerticalAlignment="Top">
+                <Grid Background="{x:Null}">
+                    <Button Content="Calculate Data" Height="24" HorizontalAlignment="Left" Margin="61,469,0,0" Name="button2" VerticalAlignment="Top" Width="97" Click="button2_Click_1" />
+                    <d3:ChartPlotter Name="myChartPlotter" Margin="239,28,40,166" Background="{x:Null}">
+                        <!--Headers (see layout above)-->
+                        <d3:Header>Bankroll Vs. Games Played</d3:Header>
+                        <d3:VerticalAxisTitle Content="Bankroll"/>
+                        <d3:HorizontalAxisTitle Content="Games Played"/>
+                        <!--Graphs-->
+                        <!--======-->
+                        <!--Gives you a mouse cursor with dotted crossed lines-->
+                        <d3:CursorCoordinateGraph Name="cursorGraph" />
+                        <!--Gives you a prolongation of crossed lines ranging inside axis labels-->
+                        <d3:AxisCursorGraph></d3:AxisCursorGraph>
+                        <!--Define X-Axis as date axis-->
+                        <d3:ChartPlotter.HorizontalAxis>
+                            <d3:IntegerAxis Name="intAxis"/>
+                        </d3:ChartPlotter.HorizontalAxis>
+                    </d3:ChartPlotter>
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="72,28,0,0" Name="txt_DeckCount" VerticalAlignment="Top" Width="42" Text="6" />
+                    <Label Content="Decks:" Height="23" HorizontalAlignment="Left" Margin="26,28,0,0" Name="label13" VerticalAlignment="Top" Width="47" />
+                    <CheckBox Content="H17" Height="24" HorizontalAlignment="Left" Margin="33,411,0,0" Name="check_H17" VerticalAlignment="Top" Width="53" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="85,59,0,0" Name="txt_BankRoll" VerticalAlignment="Top" Width="65" Text="500" />
+                    <Label Height="23" HorizontalAlignment="Left" Margin="26,57,0,0" Name="label14" VerticalAlignment="Top" Width="60" Content="Bankroll:" />
+                    <TextBox Height="23" HorizontalAlignment="Right" Margin="0,91,591,0" Name="txt_BetSpread" VerticalAlignment="Top" Width="65" Text="5" />
+                    <Label Content="Bet Spread:" Height="23" Margin="26,88,657,0" Name="label15" VerticalAlignment="Top" />
+                    <Label Content="Counting Method:" Height="23" HorizontalAlignment="Left" Margin="26,122,0,0" Name="label16" VerticalAlignment="Top" Width="114" />
+                    <RadioButton Content="None" Height="18" HorizontalAlignment="Left" Margin="146,127,0,0" Name="radio_None" VerticalAlignment="Top" Width="149" />
+                    <RadioButton Content="KO" Height="18" HorizontalAlignment="Left" Margin="146,148,0,0" Name="radio_KO" VerticalAlignment="Top" Width="149" IsChecked="True" />
+                    <TextBox Height="23" HorizontalAlignment="Right" Margin="0,177,591,0" Name="txt_Penetration" VerticalAlignment="Top" Width="65" Text=".8" />
+                    <Label Content="Penetration:" Height="26" Margin="26,174,657,0" Name="label17" VerticalAlignment="Top" />
+                    <CheckBox Content="DAS" Height="24" HorizontalAlignment="Left" Margin="91,410,0,0" Name="check_DAS" VerticalAlignment="Top" Width="49" IsChecked="True" />
+                    <TextBox Height="23" HorizontalAlignment="Right" Margin="0,208,594,0" Name="txt_HoursOfPlay" VerticalAlignment="Top" Width="53" Text="8" />
+                    <Label Content="Hours of Play:" Height="25" Margin="26,206,647,0" Name="label18" VerticalAlignment="Top" />
+                    <TextBox Height="23" HorizontalAlignment="Right" Margin="0,239,621,0" Name="txt_MinBet" VerticalAlignment="Top" Width="53" Text="5" />
+                    <Label Content="Min Bet:" Height="23" Margin="26,237,673,0" Name="label19" VerticalAlignment="Top" />
+                    <TextBox Height="23" HorizontalAlignment="Right" Margin="0,267,621,0" Name="txt_MaxBet" VerticalAlignment="Top" Width="53" Text="500" />
+                    <Label Content="Max Bet:" Height="23" Margin="26,265,673,0" Name="label20" VerticalAlignment="Top" />
+                    <TextBox Height="23" HorizontalAlignment="Right" Margin="0,298,586,0" Name="txt_NumPlayers" VerticalAlignment="Top" Width="53" Text="4" />
+                    <Label Content="Num of Players:" Height="23" Margin="26,296,639,0" Name="label21" VerticalAlignment="Top" />
+                    <CheckBox Content="RSA" Height="24" HorizontalAlignment="Left" Margin="146,410,0,0" Name="check_RSA" VerticalAlignment="Top" Width="49" IsChecked="True" />
+                    <CheckBox Content="Surrender" Height="24" HorizontalAlignment="Left" Margin="33,439,0,0" Name="check_Surrender" VerticalAlignment="Top" Width="79" />
+                    <TextBox Height="23" HorizontalAlignment="Right" Margin="0,330,591,0" Name="txt_TablePosition" VerticalAlignment="Top" Width="53" Text="0" />
+                    <Label Content="Table Position:" Height="23" Margin="26,327,647,0" Name="label22" VerticalAlignment="Top" />
+                    <CheckBox Content="Use Bet Ramp" Height="18" HorizontalAlignment="Left" Margin="31,148,0,0" Name="check_BetRamp" VerticalAlignment="Top" Width="106" IsChecked="True" />
+                    <TextBox Height="23" HorizontalAlignment="Right" Margin="0,357,542,0" Name="txt_NumberOfTrials" VerticalAlignment="Top" Width="84" Text="5000" />
+                    <Label Content="Number of Trials:" Height="23" Margin="28,354,627,0" Name="label23" VerticalAlignment="Top" />
+                    <TextBlock Height="144" HorizontalAlignment="Left" Margin="260,384,0,0" Name="txt_Results" Text="TextBlock" VerticalAlignment="Top" Width="440" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="tabItem3" HorizontalAlignment="Left" Name="tabItem3" VerticalAlignment="Top">
+                <Grid>
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="81,10,0,0" Name="txt_player1" VerticalAlignment="Top" Width="58" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="81,39,0,0" Name="txt_player2" VerticalAlignment="Top" Width="58" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="81,68,0,0" Name="txt_dealerUp" VerticalAlignment="Top" Width="58" />
+                    <Label Content="Player 1:" Height="28" HorizontalAlignment="Left" Margin="21,10,0,0" Name="label10" VerticalAlignment="Top" />
+                    <Label Content="Player 2:" Height="28" HorizontalAlignment="Left" Margin="21,39,0,0" Name="label11" VerticalAlignment="Top" />
+                    <Label Content="Dealer Up:" Height="28" HorizontalAlignment="Left" Margin="10,68,0,0" Name="label12" VerticalAlignment="Top" />
+                    <Label Content="Label" Height="41" HorizontalAlignment="Left" Margin="10,10,0,0" Name="lbl_first" VerticalAlignment="Top" Width="73" />
+                    <Label Content="Label" Height="41" HorizontalAlignment="Left" Margin="10,41,0,0" Name="lbl_second" VerticalAlignment="Top" Width="73" />
+                    <Label Content="Label" Height="41" HorizontalAlignment="Left" Margin="10,69,0,0" Name="lbl_third" VerticalAlignment="Top" Width="73" />
+                    <Label Content="Label" Height="41" HorizontalAlignment="Left" Margin="237,205,0,0" Name="lbl_fourth" VerticalAlignment="Top" Width="73" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Label Content="Label" Height="28" HorizontalAlignment="Left" Margin="955,293,0,0" Name="label1" VerticalAlignment="Top" />
+    </Grid>
+</Window>

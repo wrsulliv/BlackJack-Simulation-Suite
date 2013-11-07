@@ -1,0 +1,22 @@
+C:\Users\Will\documents\visual studio 2010\Projects\Card Game Simulator\Card Game Simulator\bin\Release\Card Game Simulator.exe
+C:\Users\Will\documents\visual studio 2010\Projects\Card Game Simulator\Card Game Simulator\bin\Release\Card Game Simulator.pdb
+C:\Users\Will\documents\visual studio 2010\Projects\Card Game Simulator\Card Game Simulator\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Will\documents\visual studio 2010\Projects\Card Game Simulator\Card Game Simulator\obj\x86\Release\MainWindow.baml
+C:\Users\Will\documents\visual studio 2010\Projects\Card Game Simulator\Card Game Simulator\obj\x86\Release\MainWindow.g.cs
+C:\Users\Will\documents\visual studio 2010\Projects\Card Game Simulator\Card Game Simulator\obj\x86\Release\App.g.cs
+C:\Users\Will\documents\visual studio 2010\Projects\Card Game Simulator\Card Game Simulator\obj\x86\Release\Card Game Simulator_MarkupCompile.cache
+C:\Users\Will\documents\visual studio 2010\Projects\Card Game Simulator\Card Game Simulator\obj\x86\Release\Card Game Simulator.g.resources
+C:\Users\Will\documents\visual studio 2010\Projects\Card Game Simulator\Card Game Simulator\obj\x86\Release\WpfApplication1.Properties.Resources.resources
+C:\Users\Will\documents\visual studio 2010\Projects\Card Game Simulator\Card Game Simulator\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\Will\documents\visual studio 2010\Projects\Card Game Simulator\Card Game Simulator\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\Will\documents\visual studio 2010\Projects\Card Game Simulator\Card Game Simulator\obj\x86\Release\Card Game Simulator.exe
+C:\Users\Will\documents\visual studio 2010\Projects\Card Game Simulator\Card Game Simulator\obj\x86\Release\Card Game Simulator.pdb
+C:\Users\Will\documents\visual studio 2010\Projects\Card Game Simulator\Card Game Simulator\bin\Release\DynamicDataDisplay.Coastline.dll
+C:\Users\Will\documents\visual studio 2010\Projects\Card Game Simulator\Card Game Simulator\bin\Release\DynamicDataDisplay.Controls.dll
+C:\Users\Will\documents\visual studio 2010\Projects\Card Game Simulator\Card Game Simulator\bin\Release\DynamicDataDisplay.dll
+C:\Users\Will\documents\visual studio 2010\Projects\Card Game Simulator\Card Game Simulator\bin\Release\DynamicDataDisplay.Maps.dll
+C:\Users\Will\documents\visual studio 2010\Projects\Card Game Simulator\Card Game Simulator\bin\Release\DynamicDataDisplay.xml
+C:\Users\Will\documents\visual studio 2010\Projects\Card Game Simulator\Card Game Simulator\bin\Release\DynamicDataDisplay.Coastline.xml
+C:\Users\Will\documents\visual studio 2010\Projects\Card Game Simulator\Card Game Simulator\bin\Release\DynamicDataDisplay.Controls.xml
+C:\Users\Will\documents\visual studio 2010\Projects\Card Game Simulator\Card Game Simulator\bin\Release\DynamicDataDisplay.Maps.xml
+C:\Users\Will\documents\visual studio 2010\Projects\Card Game Simulator\Card Game Simulator\bin\Release\ru-ru\DynamicDataDisplay.resources.dll
